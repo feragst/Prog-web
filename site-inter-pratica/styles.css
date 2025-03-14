@@ -1,0 +1,119 @@
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #ffffff;
+}
+
+
+
+
+.box {
+    width: 220px;
+    height: 350px;
+    margin: 10px;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #E5383B;
+    background-image:  linear-gradient(rgba(229, 56, 59, 0.5), rgba(229, 56, 59, 0.5)), url(https://i.pinimg.com/736x/29/d8/75/29d87538356796e8b5396cd2e17c7f72.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    word-wrap: break-word; 
+    white-space: normal; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        5px 5px 5px rgba(0, 0, 0, 0.7), 
+        -5px -5px 5px rgba(0, 0, 0, 0.7),  
+        5px 5px 5px rgba(0, 0, 0, 0.7),  
+        -5px 5px 5px rgba(0, 0, 0, 0.7); 
+}
+
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-left: 30%;
+    
+
+
+
+}
+
+header {
+    background-color: #E5383B;
+    background-image: linear-gradient(rgba(229, 56, 59, 0.5), rgba(229, 56, 59, 0.5)), url(https://scontent.fpoa5-1.fna.fbcdn.net/v/t39.30808-6/481080466_1043747787796873_6806436555934664549_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=AtvxfCIVmmYQ7kNvgFazqqn&_nc_oc=AdgqT3jEEUT8BegECSh4Ii2ebTYlLO8wyRlKwq2PKMVIGOlUeELUmiaBRQ28OCgYQ60&_nc_zt=23&_nc_ht=scontent.fpoa5-1.fna&_nc_gid=2kTjK-Gzjv28s2jiIFpa8Q&oh=00_AYEKegMwhsL-QTuNgIQFZwmYdOflbewaIuCLAmRtN1vNiQ&oe=67DA1447);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+
+}
+
+.lista {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 25%;
+
+}
+
+.lista a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+
+
+}
