@@ -26,8 +26,11 @@
 
         // função aumentar num
         function contar() {
-            count++
+           if(count >= 100) {
+            window.alert("Você chegou no limite")
+           }else {count++
             document.getElementById("count").innerHTML= count;
+           }
         }
         // função reduzir número
         function contarMenos() {
