@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Número</h1>
+    <h2 id="count">0</h2>
+
+    <!-- Botões -->
+    <div>
+        <button onclick="contar()">Contador++</button>
+        <button onclick="contarMenos()">Contador--</button>
+    </div>
+    <br>
+
+
+    <script>
+
+        //variavel 
+        var count = 0
+
+        // função aumentar num
+        function contar() {
+            count++
+            document.getElementById("count").innerHTML= count;
+        }
+        // função reduzir número
+        function contarMenos() {
+            if (count <= 0) {
+                window.alert('nao permitimos numeros negativo')
+            } else {
+                count--
+                document.getElementById("count").innerHTML= count;
+            }
+
+        }
+
+    </script>
+</body>
+
+
+</html>
