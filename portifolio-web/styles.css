@@ -26,9 +26,39 @@
 
 }
 
+section[title="principal"] .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagem-container {
+    margin-left: 20%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.imagem {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+}
+
 section[title="principal"] .box {
-    width: 220px;
-    height: 350px;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 500px;
+    height: 300px;
     margin: 10px;
     margin-top: 50px;
     padding: 10px;
@@ -36,10 +66,11 @@ section[title="principal"] .box {
     background-color: #333;
     border: 2px solid white;
     padding: 20px;
-    width: 300px;
-    margin-left: 70%;
+    margin-left: 20%;
+    margin-right: 15%;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     word-wrap: break-word;
+    border-radius: 15px;
 }
 
 section[title="principal"] h2 {
@@ -77,9 +108,17 @@ section[title="habilidades"] {
     color: white;
     font-weight: bold;
     font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
 
 
 
+}
+
+.lista a:hover {
+    color: #E5383B;
+    transform: translateY(-5px);
+    text-decoration: underline;
 }
 
 .nome {
@@ -91,10 +130,17 @@ section[title="habilidades"] {
     margin-top: 10%;
     font-family: 'Lobster', cursive;
     text-shadow:
-    3px 2px 2px rgba(0, 0, 0, 0.7),
-    -1px -1px 2px rgba(0, 0, 0, 0.7),
-    3px 2px 2px rgba(255, 255, 255, 0.7),
-    -1px 1px 2px rgba(0, 0, 0, 0.7);
+        3px 2px 2px rgba(0, 0, 0, 0.7),
+        -1px -1px 2px rgba(0, 0, 0, 0.7),
+        3px 2px 2px rgba(255, 255, 255, 0.7),
+        -1px 1px 2px rgba(0, 0, 0, 0.7);
+        transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+.nome:hover {
+    color: #c52d2f; /* Muda a cor do texto */
+    transform: scale(1.1); /* Aumenta o tamanho do texto */
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7), /* Adiciona um efeito de brilho */
+                 -1px -1px 5px rgba(0, 0, 0, 0.7);
 }
 
 header {
