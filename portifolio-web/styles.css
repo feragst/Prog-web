@@ -95,12 +95,11 @@ section[title="habilidades"] {
     gap: 50px;
     list-style-type: none;
     text-align: center;
-    /* margin-right: 50%;
-    margin-left: 50%; */
+    margin-right: 20%;
     margin-top: 15%;
+    justify-content: space-between;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
-    margin-right: 25%;
-
 
 }
 
@@ -110,8 +109,6 @@ section[title="habilidades"] {
     font-size: 20px;
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
-
-
 
 }
 
@@ -123,24 +120,25 @@ section[title="habilidades"] {
 
 .nome {
     font-size: 45px;
-    /* font-weight: bold;  */
     color: white;
     text-align: center;
-    margin-bottom: 10px;
-    margin-top: 10%;
     font-family: 'Lobster', cursive;
     text-shadow:
         3px 2px 2px rgba(0, 0, 0, 0.7),
         -1px -1px 2px rgba(0, 0, 0, 0.7),
         3px 2px 2px rgba(255, 255, 255, 0.7),
         -1px 1px 2px rgba(0, 0, 0, 0.7);
-        transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
+
 .nome:hover {
-    color: #c52d2f; /* Muda a cor do texto */
-    transform: scale(1.1); /* Aumenta o tamanho do texto */
-    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7), /* Adiciona um efeito de brilho */
-                 -1px -1px 5px rgba(0, 0, 0, 0.7);
+    color: #c52d2f;
+    /* Muda a cor do texto */
+    transform: scale(1.1);
+    /* Aumenta o tamanho do texto */
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7),
+        /* Adiciona um efeito de brilho */
+        -1px -1px 5px rgba(0, 0, 0, 0.7);
 }
 
 header {
@@ -152,6 +150,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
+
 
 
 }
