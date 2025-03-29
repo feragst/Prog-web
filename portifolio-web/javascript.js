@@ -1,5 +1,27 @@
 
+//variavel 
+var like = 0
+var dislike = 0
 
+// função aumentar num
+function contar() {
+    like++;
+    document.getElementById("like").innerHTML = like;
+    if (like == 10) {
+
+        window.alert("Obrigado pelo carinho!");
+    }
+}
+// função reduzir número
+function contarMenos() {
+    dislike++
+    if (dislike >= 1) {
+
+        window.alert('infelizmente o sistema de dislikes está quebrado. Para mais informações contate o email fernandoagostini30@gmail.com')
+
+    }
+
+}
 
 
 

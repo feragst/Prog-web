@@ -20,9 +20,10 @@
             <ul class="lista">
 
                 <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#">Projetos</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="projetos.html" target="_blank">Projetos</a></li>
                 <li><a href="https://github.com/feragst" target="_blank">Github</a></li>
+                <li><a href="https://www.instagram.com/fer_hrq/" target="_blank">Instagram</a></li>
             </ul>
         </nav>
 
@@ -31,12 +32,12 @@
         <nav>
             <div class="container flex space-between">
                 <div class="imagem-container">
-                    <img src="perfil.jpg" alt="Imagem" class="imagem">
+                    <img src="perfil.jpg" alt="Imagem" class="imagem" onclick="alert('Esse aí sou eu 😃')">
                 </div>
 
                 <div class="box">
                     <h2>Sobre mim:</h2>
-                    <p>Tenho 19 anos (atualmente), estou na finaleira do Curso Técnico de informática na Univates e
+                    <p>Tenho 19 anos, estou na finaleira do Curso Técnico de informática na Univates e
                         curto a área da programação. <br><br>
                         Um dos meus hobbies é assistir filmes e resenhar sobre os que gosto. Sou um fanático torcedor do
                         Internacional e um amante de cafés <br><br>
@@ -76,16 +77,32 @@
         <nav>
             <div class="container flex space-between">
                 <div class="box">
-                <h2>Habilidades:</h2>
+                    <h2>Habilidades:</h2>
                     <p> <b>🚀 Java</b> - Desenvolvimento de aplicações robustas e eficientes.<br><br>
                         <b>🗄️ SQL</b>- Manipulação e gerenciamento de bancos de dados.<br><br>
                         <b>🌐 HTML, CSS & JavaScript</b>- Criação de interfaces modernas e responsivas.<br><br>
                         <b>🖥️ Criação de Sites</b> - Desenvolvimento web com foco em design e usabilidade.<br><br>
-                        <b>📊 Aplicações Java com foco em dados</b> - Processamento e análise inteligente de informações.<br><br>
-                    </div>
+                        <b>📊 Aplicações Java com foco em dados</b> - Processamento e análise inteligente de
+                        informações.<br><br>
+                </div>
             </div>
         </nav>
     </section>
+
+    <div class="like-dislike">
+        <button onclick="contar()">👍</button>
+        <h1>Like</h1>
+        <h2 id="like">0</h2>
+
+        <button onclick="contarMenos()">👎</button>
+        <h1>Dislike</h1>
+        <h2 id="dislike">0</h2>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Feito a base de café | Fernando Agostini </p>
+
+    </footer>
 
     <script src="javascript.js"></script>
 </body>

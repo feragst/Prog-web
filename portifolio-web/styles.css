@@ -45,7 +45,15 @@ html {
 
 /* ------------------------------------- */
 
+.lista a[href*="github.com"] {
+    color: #a24adc;
+    font-weight: bold;
+}
 
+.lista a[href*="instagram.com"] {
+    color: #cf3170;
+    font-weight: bold;
+}
 
 .imagem-container {
     margin-left: 20%;
@@ -67,6 +75,7 @@ html {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
 }
+
 /* style da seção principal */
 section[title="principal"] .box {
     justify-content: space-between;
@@ -85,9 +94,10 @@ section[title="principal"] .box {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     word-wrap: break-word;
     border-radius: 15px;
-    
+
 
 }
+
 section[title="principal"] .container {
     display: flex;
     justify-content: space-between;
@@ -133,12 +143,13 @@ section[title="experiencia"] {
     align-items: center;
 
 }
+
 /* -------------------------------------- */
 /* style da seção habilidades */
 section[title="habilidades"] {
     color: white;
     width: 400px;
-    height: 350px;
+    height: 400px;
     margin: 50px auto;
     padding: 20px;
     background-color: #333;
@@ -149,7 +160,9 @@ section[title="habilidades"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
+
 section[title="habilidades"] h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
@@ -161,6 +174,7 @@ section[title="habilidades"] p {
     font-size: 17px;
     margin-bottom: 10px;
 }
+
 /* ----------------------------- */
 
 .lista {
@@ -205,8 +219,7 @@ section[title="habilidades"] p {
 }
 
 .nome:hover {
-    color: #c52d2f;
-    /* Muda a cor do texto */
+
     transform: scale(1.1);
     /* Aumenta o tamanho do texto */
     text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7),
@@ -223,43 +236,23 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-
-
+    margin-right: 3%;
 
 }
 
-/* disponibilizado pelo professor */
-.interna {
-    margin-top: 30px;
-    width: 300px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
+footer {
+    font-family: 'Poppins', sans-serif;
+    background-color: #333;
+    color: white;
     text-align: center;
-    border-radius: 10px;
-    word-wrap: break-word;
-    white-space: normal;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    text-shadow:
-        3px 2px 2px rgba(255, 255, 255, 0.7),
-        -1px -1px 2px rgba(255, 255, 255, 0.7),
-        3px 2px 2px rgba(255, 255, 255, 0.7),
-        -1px 1px 2px rgba(255, 255, 255, 0.7);
-}
-
-
-.externa {
-    background-color: #E5383B;
+    padding: 15px 0;
+    position: relative;
+    /* Mantém o footer no fluxo normal da página */
+    bottom: 0;
     width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 60px;
 }
+
+
 
 .flex {
     display: flex;
@@ -292,4 +285,107 @@ body {
     padding: 0;
     background-color: #252323;
 
+}
+
+.like-dislike {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.like-dislike h2 {
+    margin: 0;
+    color: white;
+}
+
+.like-dislike h1 {
+    margin: 0;
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+
+
+/* STYLE DO PROJETOS.HTML */
+.projnome {
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    text-shadow:
+        3px 2px 2px rgba(0, 0, 0, 0.7),
+        -1px -1px 2px rgba(0, 0, 0, 0.7),
+        3px 2px 2px rgba(255, 255, 255, 0.7),
+        -1px 1px 2px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.projnome:hover {
+
+    transform: scale(1.1);
+    /* aumenta o tamanho do texto */
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7),
+        /* adiciona efeito de brilho */
+        -1px -1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.listaprojetos {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.listaprojetos a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
+
+}
+
+.listaprojetos a:hover {
+    color: #E5383B;
+    transform: translateY(-5px);
+    text-decoration: underline;
+}
+
+section[title="projetos"] .box {
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 500px;
+    height: 300px;
+    margin: 10px;
+    margin-top: 50px;
+    padding: 10px;
+    color: white;
+    background-color: #333;
+    border: 2px solid white;
+    padding: 20px;
+    margin-left: 15%;
+    margin-right: 20%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    /* suaviza a transição da cor */
+
+}
+
+section[title="projetos"] .box:hover {
+    background-color: #E5383B;
+}
+
+section[title="projetos"] h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
