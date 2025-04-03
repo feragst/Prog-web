@@ -1,0 +1,37 @@
+.div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 05px;
+    gap: 5px;
+}
+
+.resultado {
+    background-color: lightgray;
+    border: 2px solid black;
+    height: 90px;
+    width: 487px;
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+.botao {
+    height: 90px;
+    width: 167px;
+    border: 2px solid black;
+    font-size: 30px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: aliceblue;
+}
+
+#igual {
+    height: 94px;
+    background-color: lightblue;
+}
+
+#igual:hover {
+    background-color: aliceblue;
+}

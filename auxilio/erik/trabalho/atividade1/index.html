@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade01</title>
+    <style>
+        .botao {
+            padding: 10px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="botao">Clique aqui</button>
+    <script>
+        let botao = document.querySelector(".botao");
+        botao.onclick = function (){
+            window.alert("Olá, mundo!");
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- criar um botão que ao clicar, mostra uma mensagem -->

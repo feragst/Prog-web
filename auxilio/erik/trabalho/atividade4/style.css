@@ -1,0 +1,46 @@
+body {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.input {
+    width: 500px;
+    height: 50px;
+    padding: 8px;
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.adicionar {
+    width: 125px;
+    height: 70px;
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.adicionar:hover {
+    background-color: lightcyan;
+}
+
+.mensagem {
+    display: none;
+}
+
+.mensagem-erro {
+    display: block;
+    color: red;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.lista {
+    list-style-type: none;
+    font-size: 20px;
+}

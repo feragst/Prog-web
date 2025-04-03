@@ -1,0 +1,27 @@
+.secao {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botao {
+    padding: 30px;
+    width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: aliceblue;
+}
+
+.numero {
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
