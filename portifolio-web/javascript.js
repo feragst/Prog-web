@@ -29,7 +29,7 @@ function contarMenos() {
 
 
 
-// OPERAÇÃO EM JAVA PARA TRANSIÇÃO GRADATIVA DE SEÇÕES ETC.
+// OPERAÇÃO EM JAVAscrpt PARA TRANSIÇÃO GRADATIVA DE SEÇÕES ETC.
 // um observer que captura quando um elemento entra em tela, entries são as seções observadas, observer é o próprio objeto.
 
 // entries.foreach percore por todas as entradas que estão sendo observadas. 

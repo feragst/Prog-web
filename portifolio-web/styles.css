@@ -247,7 +247,6 @@ footer {
     text-align: center;
     padding: 15px 0;
     position: relative;
-    /* Mantém o footer no fluxo normal da página */
     bottom: 0;
     width: 100%;
 }
@@ -388,4 +387,13 @@ section[title="projetos"] h2 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+}
+#contato {
+    text-align: center;
+    margin-top: 50px; 
+}
+
+#contato h2 {
+    color: white; 
+    font-family: 'Poppins', sans-serif; 
 }
