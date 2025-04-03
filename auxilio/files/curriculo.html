@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Interativo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            transition: background-color 0.3s;
+        }
+        .section:hover {
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meu Currículo</h1>
+        
+        <div class="section" id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou um desenvolvedor apaixonado por tecnologia e inovação.</p>
+        </div>
+        
+        <div class="section" id="experiencia">
+            <h2>Experiência</h2>
+            <p>Desenvolvedor Front-End na Empresa XYZ.</p>
+        </div>
+        
+        <div class="section" id="educacao">
+            <h2>Educação</h2>
+            <p>Formado em Análise e Desenvolvimento de Sistemas.</p>
+        </div>
+        
+        <div class="section" id="habilidades">
+            <h2>Habilidades</h2>
+            <p>HTML, CSS, JavaScript, React.</p>
+        </div>
+        
+        <button onclick="baixarPDF()">Baixar Currículo em PDF</button>
+    </div>
+
+    <script>
+        function baixarPDF() {
+            alert("O download do currículo em PDF será iniciado em breve.");
+        }
+    </script>
+</body>
+</html>

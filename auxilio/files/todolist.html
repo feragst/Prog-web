@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #f8f8f8;
+            padding: 10px;
+            margin: 5px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        li.completed {
+            text-decoration: line-through;
+            background-color: #b2f5b2;
+        }
+        li:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.02);
+        }
+        .tarefa-titulo {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .tarefa-descricao {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .tarefa-buttons {
+            margin-top: 5px;
+            align-self: flex-end;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <input type="text" id="tarefa" placeholder="Título da tarefa">
+        <input type="text" id="descricao" placeholder="Descrição da tarefa">
+        <button onclick="adicionarTarefa()">Adicionar</button>
+        <ul id="lista"></ul>
+    </div>
+    
+    <script>
+        function adicionarTarefa() {
+            let tituloInput = document.getElementById("tarefa");
+            let descricaoInput = document.getElementById("descricao");
+            let titulo = tituloInput.value.trim();
+            let descricao = descricaoInput.value.trim();
+            if (titulo === "") return;
+            
+            // CREATELEMENTE -> CONSEGUE ADICIONAR ALGO NO HTML SEM QUE ESTEJA NECESSARIAMENTE NO ARQUIVO HTML.
+            let li = document.createElement("li");
+            li.innerHTML = `<span class='tarefa-titulo'>${titulo}</span>
+                            <span class='tarefa-descricao'>${descricao}</span>
+                            <div class='tarefa-buttons'>
+                                <button onclick="removerTarefa(this)">X</button>
+                            </div>`;
+            
+            li.addEventListener("click", function() {
+                this.classList.toggle("completed");
+            });
+            
+            document.getElementById("lista").appendChild(li);
+            tituloInput.value = "";
+            descricaoInput.value = "";
+        }
+
+        function removerTarefa(botao) {
+            botao.parentElement.parentElement.remove();
+        }
+    </script>
+</body>
+</html>
