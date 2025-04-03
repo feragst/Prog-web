@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .prato, .carrinho-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background-color 0.3s;
+        }
+        .prato:hover, .carrinho-item:hover {
+            background-color: #f8f8f8;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #carrinho {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cardápio Digital</h1>
+        <input type="text" id="pesquisa" placeholder="Buscar prato..." onkeyup="filtrarPratos()">
+        <div id="cardapio"></div>
+        <h2>Carrinho</h2>
+        <div id="carrinho"></div>
+    </div>
+
+    <script>
+        const pratos = [
+            { nome: "Hambúrguer", preco: "R$ 25,00", img: "https://via.placeholder.com/50" },
+            { nome: "Pizza", preco: "R$ 40,00", img: "https://via.placeholder.com/50" },
+            { nome: "Lasanha", preco: "R$ 35,00", img: "https://via.placeholder.com/50" },
+            { nome: "Salada", preco: "R$ 20,00", img: "https://via.placeholder.com/50" }
+        ];
+
+        let carrinho = [];
+
+        function mostrarPratos() {
+            let cardapio = document.getElementById("cardapio");
+            cardapio.innerHTML = "";
+            pratos.forEach(prato => {
+                let div = document.createElement("div");
+                div.classList.add("prato");
+                div.innerHTML = `
+                    <img src="${prato.img}" alt="${prato.nome}">
+                    <span><strong>${prato.nome}</strong> - ${prato.preco}</span>
+                    <button onclick="adicionarPedido('${prato.nome}', '${prato.preco}', '${prato.img}')">Adicionar</button>
+                `;
+                cardapio.appendChild(div);
+            });
+        }
+
+        function filtrarPratos() {
+            let termo = document.getElementById("pesquisa").value.toLowerCase();
+            let pratosExibidos = pratos.filter(prato => prato.nome.toLowerCase().includes(termo));
+            let cardapio = document.getElementById("cardapio");
+            cardapio.innerHTML = "";
+            pratosExibidos.forEach(prato => {
+                let div = document.createElement("div");
+                div.classList.add("prato");
+                div.innerHTML = `
+                    <img src="${prato.img}" alt="${prato.nome}">
+                    <span><strong>${prato.nome}</strong> - ${prato.preco}</span>
+                    <button onclick="adicionarPedido('${prato.nome}', '${prato.preco}', '${prato.img}')">Adicionar</button>
+                `;
+                cardapio.appendChild(div);
+            });
+        }
+
+        function adicionarPedido(nome, preco, img) {
+            let item = carrinho.find(p => p.nome === nome);
+            if (item) {
+                item.quantidade++;
+            } else {
+                carrinho.push({ nome, preco, img, quantidade: 1 });
+            }
+            atualizarCarrinho();
+        }
+
+        function removerPedido(nome) {
+            carrinho = carrinho.filter(p => p.nome !== nome);
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            let carrinhoDiv = document.getElementById("carrinho");
+            carrinhoDiv.innerHTML = "";
+            carrinho.forEach(prato => {
+                let div = document.createElement("div");
+                div.classList.add("carrinho-item");
+                div.innerHTML = `
+                    <img src="${prato.img}" alt="${prato.nome}">
+                    <span><strong>${prato.nome}</strong> - ${prato.preco} (x${prato.quantidade})</span>
+                    <button onclick="removerPedido('${prato.nome}')">Remover</button>
+                `;
+                carrinhoDiv.appendChild(div);
+            });
+        }
+
+        mostrarPratos();
+    </script>
+</body>
+</html>
