@@ -2,9 +2,9 @@
 
 include 'Database.php';
 
-class ControlaCliente
+class ControlaVenda
 {
-    private $tabela = 'clientes';
+    private $tabela = 'vendas';
     private $db;
     private $connection;
 
@@ -14,15 +14,15 @@ class ControlaCliente
         $this->connection = $this->db->getConnection();
     }
 
-    public function salvar(Cliente $cliente)
+    public function salvar(Vendas $venda)
     {
         try {
-            $sql = "INSERT INTO $this->tabela (nome, email, idade, genero) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO $this->tabela (nomecliente, precototal, produto) VALUES (?, ?, ?)";
             $stmt = $this->connection->prepare($sql);
-            $stmt->execute([$cliente->getNome(), $cliente->getEmail(), $cliente->getIdade(), $cliente->getGenero()]);
+            $stmt->execute([$venda->getNome(), $venda->getPrecoTotal(), $venda->getProduto()]);
             $this->db->closeConnection();
         } catch (\Exception $e) {
-            throw new \Exception("Erro ao inserir usuário: " . $e->getMessage());
+            throw new \Exception("Erro ao inserir venda: " . $e->getMessage());
         }
     }
 
@@ -31,51 +31,50 @@ class ControlaCliente
         try {
             $sql = "SELECT * FROM $this->tabela";
             $stmt = $this->connection->query($sql);
-            $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $this->db->closeConnection();
-            return $clientes;
+            return $vendas;
         } catch (\Exception $e) {
-            throw new \Exception("Erro ao listar usuários: " . $e->getMessage());
+            throw new \Exception("Erro ao listar vendas: " . $e->getMessage());
         }
     }
 
     public function excluir($id)
     {
         try {
-            $sql = "DELETE FROM $this->tabela WHERE idcliente = ?";
+            $sql = "DELETE FROM $this->tabela WHERE idvenda = ?";
             $stmt = $this->connection->prepare($sql);
             $stmt->execute([$id]);
             $this->db->closeConnection();
         } catch (\Exception $e) {
-            throw new \Exception("Erro ao excluir usuário: " . $e->getMessage());
+            throw new \Exception("Erro ao excluir venda: " . $e->getMessage());
         }
     }
 
     public function buscarPorId($id)
     {
         try {
-            $sql = "SELECT * FROM $this->tabela WHERE idcliente = ?";
+            $sql = "SELECT * FROM $this->tabela WHERE idvenda = ?";
             $stmt = $this->connection->prepare($sql);
             $stmt->execute([$id]);
-            $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
+            $venda = $stmt->fetch(PDO::FETCH_ASSOC);
             $this->db->closeConnection();
-            return $cliente;
+            return $venda;
         } catch (\Exception $e) {
-            throw new \Exception("Erro ao buscar usuário: " . $e->getMessage());
+            throw new \Exception("Erro ao buscar venda: " . $e->getMessage());
         }
     }
 
-    public function atualizar(Cliente $cliente)
+    public function atualizar(Vendas $venda)
     {
         try {
-            $sql = "UPDATE $this->tabela SET nome = ?, email = ?, idade = ?, genero = ? WHERE idcliente = ?";
+            $sql = "UPDATE $this->tabela SET nomecliente = ?, precototal = ?, produto = ? WHERE idvenda = ?";
             $stmt = $this->connection->prepare($sql);
             $stmt->execute([
-                $cliente->getNome(),
-                $cliente->getEmail(),
-                $cliente->getIdade(),
-                $cliente->getGenero(),
-                $cliente->getId()
+                $venda->getNome(),
+                $venda->getPrecototal(),
+                $venda->getProduto(),
+                $venda->getId()
             ]);
             $this->db->closeConnection();
         } catch (\Exception $e) {
