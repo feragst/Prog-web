@@ -21,8 +21,8 @@ $venda = $controlaVenda->listar();
                 <tr>
                     <th>ID</th>
                     <th>Nome do venda:</th>
-                    <th>Produto:</th>
                     <th>Preço total:</th>
+                    <th>Produto:</th>
 
                 </tr>
             </thead>
@@ -42,7 +42,7 @@ $venda = $controlaVenda->listar();
                     
                 <?php endforeach; ?>
             </tbody>
-
+</table>
         <a href="cadastra.html" class="button">Cadastrar Nova Venda</a>
 
     <?php else: ?>

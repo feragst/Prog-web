@@ -7,22 +7,26 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
+    background-color: #b5cfbb;
+    color: #000000;
     padding: 20px;
 }
 
 h2 {
+    margin-left: 30%;
     margin-bottom: 20px;
-    color: #007BFF;
+    margin-top: 60px;
+    color: #0d0d0d;
 }
 
 form {
-    background-color: #fff;
+    background-color: #dedddd;
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
+    margin-top: 60px;
     margin-bottom: 30px;
+    margin-left: 30%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -39,11 +43,13 @@ form input {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+
 }
 
 button,
 .button {
-    background-color: #007BFF;
+    background-color: #79b888;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -53,6 +59,7 @@ button,
     cursor: pointer;
     display: inline-block;
     margin-top: 10px;
+    margin-left: 33%;
 }
 
 .button.delete {
@@ -88,4 +95,75 @@ th {
 td:last-child {
     display: flex;
     gap: 10px;
+}
+
+body.home {
+    font-family: Arial, sans-serif;
+    background-color: #b5cfbb;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #79b888;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2ac922;
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    background-color: #ffffff;
+    border: 2px solid #79b888;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000;
+}
+
+.home-button:hover {
+    background-color: #79b888;
+    color: white;
+    transform: scale(1.05);
+}
+.extra-button {
+    text-align: center;
+    margin-top: 20px; 
+    margin-right: 22%;
 }

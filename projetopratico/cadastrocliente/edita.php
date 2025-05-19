@@ -18,6 +18,7 @@ if (!$cliente) {
 <head>
     <meta charset="UTF-8">
     <title>Editar Cliente</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <h2>Editar Cliente</h2>
