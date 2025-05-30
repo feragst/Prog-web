@@ -18,6 +18,7 @@ if (!$venda) {
 <head>
     <meta charset="UTF-8">
     <title>Editar Venda</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <h2>Editar Venda</h2>
