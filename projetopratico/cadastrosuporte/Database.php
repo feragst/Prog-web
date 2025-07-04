@@ -4,9 +4,9 @@ class Database {
 
     public function __construct() {
         $host = 'localhost';
-        $dbname = 'agostini';
-        $username = 'agostini';
-        $password = 'gbVwPQCP/sZ92qP7';
+        $dbname = 'projetobanco';
+        $username = 'postgres';
+        $password = 'postgres';
         $port = '5432';
 
         $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Suporte</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a href="../index.php" class="home-button">🏠</a>
+
+    <h2>Abrir chamado:</h2>
+    <form id="cadastroForm" action="processaCadastro.php" method="post">
+        <label>Nome do cliente:</label>
+        <input type="text" name="nomecliente" required>
+        <label>Email:</label>
+        <input type="email" name="emailcliente" required>
+        <label>Assunto:</label>
+        <input type="text" name="assunto" required>
+        <label>Mensagem:</label>
+        <input type="text" name="mensagem" required>
+
+        <button type="submit">Abrir chamado</button>
+    </form>
+     <a href="index.php" class="button">Ver Lista de Chamados</a>
+</body>
+</html>
