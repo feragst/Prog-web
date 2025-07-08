@@ -21,6 +21,7 @@ if (!$cliente) {
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <a href="../index.php" class="home-button">🏠</a>
     <h2>Editar Cliente</h2>
     <form action="../services/processaEdicaoCliente.php" method="post">
         <input type="hidden" name="idcliente" value="<?= $cliente['idcliente'] ?>">

@@ -15,6 +15,7 @@ $suporte = $controlaSuporte->listar();
     
 </head>
 <body>
+    <a href="../index.php" class="home-button">🏠</a>
     <h2>Chamados cadastrados</h2>
 
     <?php if (count($suporte) > 0): ?>

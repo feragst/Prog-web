@@ -21,6 +21,7 @@ if (!$suporte) {
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <a href="../index.php" class="home-button">🏠</a>
     <h2>Editar Chamado</h2>
     <form action="../services/processaEdicaoSuporte.php" method="post">
         <input type="hidden" name="idchamado" value="<?= $suporte['idchamado'] ?>">

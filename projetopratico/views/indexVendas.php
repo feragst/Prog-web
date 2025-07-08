@@ -13,6 +13,7 @@ $venda = $controlaVenda->listar();
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <a href="../index.php" class="home-button">🏠</a>
     <h2>Vendas cadastrados</h2>
 
     <?php if (count($venda) > 0): ?>

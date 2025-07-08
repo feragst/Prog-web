@@ -15,6 +15,7 @@ $cliente = $controlaCliente->listar();
     
 </head>
 <body>
+    <a href="../index.php" class="home-button">🏠</a>
     <h2>Cliente cadastrados</h2>
 
     <?php if (count($cliente) > 0): ?>

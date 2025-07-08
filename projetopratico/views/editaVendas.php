@@ -21,6 +21,7 @@ if (!$venda) {
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <a href="../index.php" class="home-button">🏠</a>
     <h2>Editar Venda</h2>
     <form action="../services/processaEdicaoVendas.php" method="post">
         <input type="hidden" name="idvenda" value="<?= $venda['idvenda'] ?>">
