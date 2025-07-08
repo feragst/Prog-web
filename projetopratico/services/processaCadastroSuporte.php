@@ -1,6 +1,6 @@
 <?php
-include 'Suporte.php';
-include 'ControlaSuporte.php';
+include '../models/Suporte.php';
+include '../controllers/ControlaSuporte.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomecliente = $_POST['nomecliente'];
@@ -13,5 +13,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $controlaSuporte->salvar($suporte);
 
-    header("Location: cadastra.html");
+    header("Location: ../views/cadastraSuporte.html");
 }

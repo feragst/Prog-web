@@ -1,6 +1,6 @@
 <?php
 
-include 'Database.php';
+include '../others/Database.php';
 
 class ControlaCliente
 {

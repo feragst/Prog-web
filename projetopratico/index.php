@@ -12,9 +12,9 @@
 <div class="container">
     <h1>LOJA DO GRINGO</h1>
     <div class="button-group">
-        <a href="cadastrocliente/cadastra.html" class="btn">Cadastro de Clientes</a>
-        <a href="cadastrovendas/cadastra.html" class="btn">Cadastro de Vendas</a>
-        <a href="cadastrosuporte/cadastra.html" class="btn">Cadastro de chamados</a>
+        <a href="views/cadastraCliente.html" class="btn">Cadastro de Clientes</a>
+        <a href="views/cadastraVendas.html" class="btn">Cadastro de Vendas</a>
+        <a href="views/cadastraSuporte.html" class="btn">Cadastro de chamados</a>
     </div>
     <div class="extra-button">
         <button onclick="msgMotiv()" class="btn extra">🎉 MENSAGENS MOTIVACIONAIS DO GRINGO</button>

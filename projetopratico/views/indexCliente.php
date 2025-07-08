@@ -1,5 +1,5 @@
 <?php
-require_once 'ControlaCliente.php';
+require_once '../controllers/ControlaCliente.php';
 
 $controlaCliente = new ControlaCliente();
 $cliente = $controlaCliente->listar();
@@ -38,15 +38,15 @@ $cliente = $controlaCliente->listar();
                         <td><?= $cliente['idade'] ?></td>
                         <td><?= $cliente['genero'] ?></td>
                         <td>
-                            <a class="button" href="edita.php?id=<?= $cliente['idcliente'] ?>">Editar</a>
-                            <a class="button delete" href="excluir.php?id=<?= $cliente['idcliente'] ?>">Excluir</a>
+                            <a class="button" href="editaCliente.php?id=<?= $cliente['idcliente'] ?>">Editar</a>
+                            <a class="button delete" href="../services/excluirCliente.php?id=<?= $cliente['idcliente'] ?>">Excluir</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
 
-                <a href="cadastra.html" class="button">Cadastrar Novo cliente</a>
+                <a href="cadastraCliente.html" class="button">Cadastrar Novo cliente</a>
     <?php else: ?>
         <p>Nenhum usuário cadastrado.</p>
     <?php endif; ?>

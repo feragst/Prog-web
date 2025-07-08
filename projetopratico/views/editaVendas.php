@@ -1,5 +1,5 @@
 <?php
-include 'ControlaVenda.php';
+include '../controllers/ControlaVenda.php';
 
 if (!isset($_GET['id'])) {
     die('ID do Venda não informado.');
@@ -22,7 +22,7 @@ if (!$venda) {
 </head>
 <body>
     <h2>Editar Venda</h2>
-    <form action="processaEdicao.php" method="post">
+    <form action="../services/processaEdicaoVendas.php" method="post">
         <input type="hidden" name="idvenda" value="<?= $venda['idvenda'] ?>">
         <label>Nome do cliente:</label>
         <input type="text" name="nomecliente" value="<?= $venda['nomecliente'] ?>" required>

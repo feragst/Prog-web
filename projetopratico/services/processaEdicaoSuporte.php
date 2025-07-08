@@ -1,6 +1,6 @@
 <?php
-include 'Suporte.php';
-include 'ControlaSuporte.php';
+include '../models/Suporte.php';
+include '../controllers/ControlaSuporte.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idchamado'])) {
     $id = $_POST['idchamado'];
@@ -15,6 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idchamado'])) {
 
     $controlaSuporte->atualizar($suporte);
 
-    header("Location: index.php");
+    header("Location: ../views/indexSuporte.php");
     exit;
 } 

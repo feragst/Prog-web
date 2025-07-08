@@ -1,5 +1,5 @@
 <?php
-include 'ControlaCliente.php';
+include '../controllers/ControlaCliente.php';
 
 if (!isset($_GET['id'])) {
     die('ID do Cliente não informado.');
@@ -22,7 +22,7 @@ if (!$cliente) {
 </head>
 <body>
     <h2>Editar Cliente</h2>
-    <form action="processaEdicao.php" method="post">
+    <form action="../services/processaEdicaoCliente.php" method="post">
         <input type="hidden" name="idcliente" value="<?= $cliente['idcliente'] ?>">
         <label>Nome completo</label>
         <input type="text" name="nome" value="<?= $cliente['nome'] ?>" required>

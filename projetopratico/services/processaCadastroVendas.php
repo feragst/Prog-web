@@ -1,6 +1,6 @@
 <?php
-include 'Vendas.php';
-include 'ControlaVenda.php';
+include '../models/Vendas.php';
+include '../controllers/ControlaVenda.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomecliente = $_POST['nomecliente'];
@@ -13,5 +13,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $controlaVenda->salvar($venda);
 
-    header("Location: cadastra.html");
+    header("Location: ../views/cadastraVendas.html");
 }

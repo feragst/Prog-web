@@ -1,6 +1,6 @@
 <?php
-include 'Vendas.php';
-include 'ControlaVenda.php';
+include '../models/Vendas.php';
+include '../controllers/ControlaVenda.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idvenda'])) {
     $id = $_POST['idvenda'];
@@ -15,6 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idvenda'])) {
 
     $controlaVenda->atualizar($venda);
 
-    header("Location: index.php");
+    header("Location: ../views/indexVendas.php");
     exit;
 } 

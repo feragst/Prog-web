@@ -1,5 +1,5 @@
 <?php
-include 'ControlaSuporte.php';
+include '../controllers/ControlaSuporte.php';
 
 if (!isset($_GET['id'])) {
     die('ID do chamado não informado.');
@@ -22,7 +22,7 @@ if (!$suporte) {
 </head>
 <body>
     <h2>Editar Chamado</h2>
-    <form action="processaEdicao.php" method="post">
+    <form action="../services/processaEdicaoSuporte.php" method="post">
         <input type="hidden" name="idchamado" value="<?= $suporte['idchamado'] ?>">
         <label>Nome completo:</label>
         <input type="text" name="nomecliente" value="<?= $suporte['nomecliente'] ?>" required>

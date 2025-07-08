@@ -1,5 +1,5 @@
 <?php
-require_once 'ControlaVenda.php';
+require_once '../controllers/ControlaVenda.php';
 
 $controlaVenda = new ControlaVenda();
 $venda = $controlaVenda->listar();
@@ -35,15 +35,15 @@ $venda = $controlaVenda->listar();
                         <td><?= $venda['produto'] ?></td>
                        
                         <td>
-                            <a class="button" href="edita.php?id=<?= $venda['idvenda'] ?>">Editar</a>
-                            <a class="button delete" href="excluir.php?id=<?= $venda['idvenda'] ?>">Excluir</a>
+                            <a class="button" href="editaVendas.php?id=<?= $venda['idvenda'] ?>">Editar</a>
+                            <a class="button delete" href="../services/excluirVendas.php?id=<?= $venda['idvenda'] ?>">Excluir</a>
                         </td>
                     </tr>
                     
                 <?php endforeach; ?>
             </tbody>
 </table>
-        <a href="cadastra.html" class="button">Cadastrar Nova Venda</a>
+        <a href="cadastraVendas.html" class="button">Cadastrar Nova Venda</a>
 
     <?php else: ?>
         <p>Nenhuma venda cadastrado.</p>

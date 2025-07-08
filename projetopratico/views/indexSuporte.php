@@ -1,5 +1,5 @@
 <?php
-require_once 'ControlaSuporte.php';
+require_once '../controllers/ControlaSuporte.php';
 
 $controlaSuporte = new ControlaSuporte();
 $suporte = $controlaSuporte->listar();
@@ -38,15 +38,15 @@ $suporte = $controlaSuporte->listar();
                         <td><?= $suporte['assunto'] ?></td>
                         <td><?= $suporte['mensagem'] ?></td>
                         <td>
-                            <a class="button" href="edita.php?id=<?= $suporte['idchamado'] ?>">Editar</a>
-                            <a class="button delete" href="excluir.php?id=<?= $suporte['idchamado'] ?>">Excluir</a>
+                            <a class="button" href="editaSuporte.php?id=<?= $suporte['idchamado'] ?>">Editar</a>
+                            <a class="button delete" href="../services/excluirSuporte.php?id=<?= $suporte['idchamado'] ?>">Excluir</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
 
-                <a href="cadastra.html" class="button">Cadastrar Novo Chamado</a>
+                <a href="cadastraSuporte.html" class="button">Cadastrar Novo Chamado</a>
     <?php else: ?>
         <p>Nenhum chamado cadastrado.</p>
     <?php endif; ?>

@@ -1,6 +1,6 @@
 <?php
-include 'Cliente.php';
-include 'ControlaCliente.php';
+include '../models/Cliente.php';
+include '../controllers/ControlaCliente.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idcliente'])) {
     $id = $_POST['idcliente'];
@@ -15,6 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idcliente'])) {
 
     $controlaCliente->atualizar($cliente);
 
-    header("Location: index.php");
+    header("Location: ../views/indexCliente.php");
     exit;
 } 
